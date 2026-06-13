@@ -1,32 +1,82 @@
 import React from 'react';
 import { GrLinkedinOption } from "react-icons/gr";
 import { FaGitAlt, FaInstagram } from "react-icons/fa";
-// Supports weights 400-700
-import '@fontsource-variable/caveat/wght.css';
+import { BiLogoGmail } from "react-icons/bi";
+import SplitText from '../components/SplitText';
+
 
 
 const Hero = () => {
   return (
-    <>
-    <div className='w-full  h-screen flex '>
-        <div className='h-full flex px-15 flex-col gap-20 justify-center  bg-[#0a192f]  font-bold w-1/2 '>
-            <h1 className='text-9xl font-space-mono leading-30 font-bold text-white'>Ankit Rajput</h1>
-            <div className='flex  text-2xl p-4  text-gray-400 font-bold gap-20'>
-                <p className='text-4xl hover:text-blue-600 cursor-pointer ' ><GrLinkedinOption /></p>
-                <p className='text-4xl hover:text-green-800 cursor-pointer ' ><FaGitAlt /></p>
-                <p className='text-4xl hover:text-pink-500  cursor-pointer' ><FaInstagram/></p>
-                
-            </div>
-        </div>
-        <div className=' w-1/2 flex items-center justify-center '>
-<img className='h-full w-full object-cover' src="/char.png" alt="" />
+    <div className='w-full h-screen flex bg-[#E8BF6A] items-center justify-center'>
+      <div className='h-full flex px-15 flex-col items-center gap-12 justify-center font-bold'>
 
+        <SplitText
+  text="Ankit Rajput"
+  className='text-9xl font-bold  leading-30'
+  delay={160}
+  duration={1.25}
+  ease="power3.out"
+  splitType="chars"
+  from={{ opacity: 0, y: 40 }}
+  to={{ opacity: 1, y: 0 }}
+  threshold={0.1}
+  rootMargin="-100px"
+  textAlign="center"
+  showCallback
+/>
+
+        {/* Resume Button */}
+        <a
+          href="/resume.pdf" // Put your resume in the public folder
+          target="_blank"
+          rel="noopener noreferrer"
+          className='px-8 py-3 text-lg border-2 border-white  rounded-full
+                     hover:bg-white hover:text-black transition-all duration-300'
+        >
+          Download Resume
+        </a>
+
+        {/* Social Icons */}
+        <div className='flex text-2xl p-4  gap-20'>
+          <a
+            href="https://linkedin.com/in/your-linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className='text-4xl hover:text-blue-600 transition-colors'
+          >
+            <GrLinkedinOption />
+          </a>
+
+          <a
+            href="https://github.com/your-github"
+            target="_blank"
+            rel="noopener noreferrer"
+            className='text-4xl hover:text-green-600 transition-colors'
+          >
+            <FaGitAlt />
+          </a>
+
+          <a
+            href="https://instagram.com/your-instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            className='text-4xl hover:text-pink-500 transition-colors'
+          >
+            <FaInstagram />
+          </a>
+
+          <a
+            href="mailto:yourmail@gmail.com"
+            className='text-4xl hover:text-red-500 transition-colors'
+          >
+            <BiLogoGmail />
+          </a>
         </div>
+
+      </div>
     </div>
-
-
-    </>
   );
-}
+};
 
 export default Hero;
