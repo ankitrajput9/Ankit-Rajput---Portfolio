@@ -8,7 +8,6 @@ const Projects = () => {
       tag: "REALTIME",
       image:
         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800",
-      height: "h-[400px]",
     },
     {
       title: "Portfolio Website",
@@ -16,7 +15,6 @@ const Projects = () => {
       tag: "FRONTEND",
       image:
         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
-      height: "h-[500px]",
     },
     {
       title: "E-Commerce API",
@@ -24,7 +22,6 @@ const Projects = () => {
       tag: "BACKEND",
       image:
         "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800",
-      height: "h-[400px]",
     },
     {
       title: "Task Manager",
@@ -32,51 +29,48 @@ const Projects = () => {
       tag: "FULLSTACK",
       image:
         "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800",
-      height: "h-[500px]",
     },
   ];
 
   return (
-    <section className="min-h-screen bg-[#E8BF6A] px-8 py-20">
+    <section className="min-h-screen bg-[#E8BF6A] px-8 py-20 overflow-hidden">
       {/* Heading */}
-      <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-black mb-16">
+      <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-black mb-24">
         | projects
       </h1>
 
-      {/* Projects */}
+      {/* Projects Container */}
       <div className="flex flex-wrap justify-center gap-8">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group w-72 cursor-pointer"
+            className={`
+              w-65
+              cursor-pointer
+              transition-all
+              duration-500
+              hover:scale-100
+              hover:-translate-y-15
+              ${
+                index % 2 === 0
+                  ? "-translate-y-15"
+                  : "translate-y-15"
+              }
+            `}
           >
             {/* Image Card */}
-            <div
-              className={`
-                ${project.height}
-                overflow-hidden
-                rounded-[30px]
-                bg-white
-              `}
-            >
+            <div className="h-95 overflow-hidden rounded-[28px] bg-white shadow-lg">
               <img
                 src={project.image}
                 alt={project.title}
-                className="
-                  w-full
-                  h-full
-                  object-cover
-                  transition-all
-                  duration-500
-                  group-hover:scale-110
-                "
+                className="w-full h-full object-cover"
               />
             </div>
 
             {/* Content */}
-            <div className="mt-5 flex items-start justify-between">
+            <div className="mt-5 flex items-start justify-between gap-3">
               <div>
-                <h3 className="text-2xl font-black uppercase leading-tight">
+                <h3 className="text-2xl font-black uppercase leading-tight text-black">
                   {project.title}
                 </h3>
 

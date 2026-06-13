@@ -40,7 +40,7 @@ const Hero = () => {
         {/* Social Icons */}
         <div className='flex text-2xl p-4  gap-20'>
           <a
-            href="https://linkedin.com/in/your-linkedin"
+            href="https://www.linkedin.com/in/ankit-rajput-a42357255/"
             target="_blank"
             rel="noopener noreferrer"
             className='text-4xl hover:text-blue-600 transition-colors'
@@ -49,7 +49,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="https://github.com/your-github"
+            href="https://github.com/ankitrajput9"
             target="_blank"
             rel="noopener noreferrer"
             className='text-4xl hover:text-green-600 transition-colors'
@@ -58,7 +58,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="https://instagram.com/your-instagram"
+            href="https://www.instagram.com/a_nkit_rajput_/"
             target="_blank"
             rel="noopener noreferrer"
             className='text-4xl hover:text-pink-500 transition-colors'
@@ -67,10 +67,10 @@ const Hero = () => {
           </a>
 
           <a
-            href="mailto:yourmail@gmail.com"
+            href="mailto:rajputankit9630@gmail.com"
             className='text-4xl hover:text-red-500 transition-colors'
           >
-            <BiLogoGmail />
+            <BiLogoGmail  />
           </a>
         </div>
 
