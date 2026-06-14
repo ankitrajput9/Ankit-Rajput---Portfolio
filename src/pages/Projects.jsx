@@ -3,32 +3,38 @@ import React from "react";
 const Projects = () => {
   const projects = [
     {
-      title: "Chat Application",
-      category: "MERN + SOCKET.IO",
-      tag: "REALTIME",
-      image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800",
+      title: "Spotify Clone - Music Player",
+      category: "React + Redux",
+      tag: "FULLSTACK",
+      image: "/spotify.png",
+      description:
+        "A modern Spotify-inspired music streaming application built with React and Redux. Features playlist management, music controls, music recommendations, responsive design, and a seamless listening experience.",
     },
     {
       title: "Portfolio Website",
-      category: "REACT + TAILWIND",
+      category: "React + Tailwind",
       tag: "FRONTEND",
       image:
         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
+      description:
+        "A modern developer portfolio designed to showcase projects, skills, and achievements. Built with React, Tailwind CSS, smooth animations, and a clean user experience focused on visual storytelling.",
     },
     {
       title: "E-Commerce API",
-      category: "NODE + MONGODB",
+      category: "Node + MongoDB",
       tag: "BACKEND",
       image:
         "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800",
+      description:
+        "A scalable REST API built using Node.js, Express, and MongoDB. Includes authentication, product management, order processing, secure routes, and optimized database performance.",
     },
     {
-      title: "Task Manager",
-      category: "REDUX TOOLKIT",
+      title: "CodeEditor - AI Integrated",
+      category: "MERN + AI",
       tag: "FULLSTACK",
-      image:
-        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800",
+      image: "/codeeditor.png",
+      description:
+        "An AI-powered code editor featuring intelligent code suggestions, real-time collaboration, syntax highlighting, AI chat assistance, and productivity-focused developer tools.",
     },
   ];
 
@@ -39,8 +45,8 @@ const Projects = () => {
         | projects
       </h1>
 
-      {/* Projects Container */}
-      <div className="flex flex-wrap justify-center gap-8">
+      {/* Cards */}
+      <div className="flex flex-wrap justify-center gap-14">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -49,12 +55,11 @@ const Projects = () => {
               cursor-pointer
               transition-all
               duration-500
-              hover:scale-100
-              hover:-translate-y-15
+              hover:-translate-y-8
               ${
                 index % 2 === 0
-                  ? "-translate-y-15"
-                  : "translate-y-15"
+                  ? "-translate-y-8"
+                  : "translate-y-8"
               }
             `}
           >
@@ -67,10 +72,10 @@ const Projects = () => {
               />
             </div>
 
-            {/* Content */}
+            {/* Title */}
             <div className="mt-5 flex items-start justify-between gap-3">
               <div>
-                <h3 className="text-2xl font-black uppercase leading-tight text-black">
+                <h3 className="text-2xl  font-black uppercase leading-tight text-black font-FZHLJW">
                   {project.title}
                 </h3>
 
@@ -96,6 +101,20 @@ const Projects = () => {
                 {project.tag}
               </span>
             </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Description Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-15 ">
+        {projects.map((project, index) => (
+          <div key={index}>
+            {/* Top Line */}
+            <div className="w-full h-[2px] bg-[#C8861D] mb-6" />
+
+            <p className="text-[20px] leading-[1.5] text-black/80 font-Faktum-Medium ">
+              {project.description}
+            </p>
           </div>
         ))}
       </div>

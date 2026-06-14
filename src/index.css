@@ -18,9 +18,51 @@
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: "common";
+  src: url("./assets/fonts/common.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "manuka";
+  src: url("./assets/fonts/manuka.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FZHLJW";
+  src: url("./assets/fonts/manuka.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Faktum-Medium";
+  src: url("./assets/fonts/Faktum-Medium.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+
 @theme {
   --font-myfont: "MyFont", sans-serif;
+  --font-common: "common", sans-serif;
+  --font-manuka: "manuka", sans-serif;
+  --font-FZHLJW :"FZHLJW",sans-serif;
+  --font-Faktum-Medium :"Faktum-Medium",sans-serif;
+
+  
 }
+
+
+
+
+
 
 @theme inline {
   --font-heading: var(--font-sans);
