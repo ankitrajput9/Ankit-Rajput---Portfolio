@@ -62,7 +62,7 @@ const Skills = () => {
     <section className="w-full min-h-screen bg-[#E8BF6A] px-6 md:px-10 py-20">
       {/* Heading */}
       <div className="mb-16">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-black leading-none">
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-black leading-none font-FZHLJW">
           | skills
         </h1>
       </div>

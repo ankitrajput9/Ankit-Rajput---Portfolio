@@ -41,7 +41,7 @@ const Projects = () => {
   return (
     <section className="min-h-screen bg-[#E8BF6A] px-8 py-20 overflow-hidden">
       {/* Heading */}
-      <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-black mb-24">
+      <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-black mb-24 font-FZHLJW">
         | projects
       </h1>
 

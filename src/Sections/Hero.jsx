@@ -78,20 +78,20 @@ const Hero = () => {
           </div>
 
           {/* SOCIALS */}
-          <div className="flex gap-8 mt-12 text-3xl">
-            <a href="https://www.linkedin.com/in/ankit-rajput-a42357255/">
+          <div className="flex gap-12 mt-12 text-3xl  ">
+            <a className="hover:scale-130 transition hover:text-blue-800" href="https://www.linkedin.com/in/ankit-rajput-a42357255/">
               <GrLinkedinOption />
             </a>
 
-            <a href="https://github.com/ankitrajput9">
+            <a className="hover:scale-130 transition hover:text-green-800" href="https://github.com/ankitrajput9">
               <FaGitAlt />
             </a>
 
-            <a href="https://www.instagram.com/a_nkit_rajput_/">
+            <a className="hover:scale-130 transition hover:text-pink-800" href="https://www.instagram.com/a_nkit_rajput_/">
               <FaInstagram />
             </a>
 
-            <a href="mailto:rajputankit9630@gmail.com">
+            <a className="hover:scale-130 transition hover:text-red-800" href="mailto:rajputankit9630@gmail.com">
               <BiLogoGmail />
             </a>
           </div>
