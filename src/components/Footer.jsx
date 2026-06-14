@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="h-[1px] bg-black/20 my-12" />
+        <div className="h-1px bg-black/20 my-12" />
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
