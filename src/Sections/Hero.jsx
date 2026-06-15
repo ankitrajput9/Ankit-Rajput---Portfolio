@@ -1,26 +1,34 @@
 import React from "react";
-import {
-  GrLinkedinOption,
-} from "react-icons/gr";
-import {
-  FaGitAlt,
-  FaInstagram,
-} from "react-icons/fa";
+import { GrLinkedinOption } from "react-icons/gr";
+import { FaGitAlt, FaInstagram } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-[#E8BF6A] p-8 md:px-16">
-      <div className="max-w-350 mx-auto min-h-screen flex items-center">
-
-        {/* LEFT */}
-        <div className="flex-1">
-
-          <p className="uppercase tracking-[4px] text-2xl mb-6">
+<section className="min-h-screen bg-[#E8BF6A] px-4 sm:px-8 md:px-10 lg:px-16 ">     
+   <div className="max-w-[85vw] xl:max-w-[90vw] mx-auto min-h-screen flex items-center">
+        
+        <div className="flex-1 flex flex-col justify-center text-center lg:text-left">
+          
+          {/* Intro */}
+          <p className="uppercase tracking-[0.25em] text-sm sm:text-lg md:text-xl mb-[2vh]">
             Hey, I'm Ankit 👋
           </p>
 
-          <h1 className="text-7xl md:text-9xl font-black leading-[0.9] uppercase">
+          {/* Heading */}
+          <h1
+              className="
+  text-[2.5rem]
+  sm:text-5xl
+  md:text-7xl
+  lg:text-8xl
+  xl:text-[8rem]
+  2xl:text-[10rem]
+  font-black
+  leading-[0.9]
+  uppercase
+  "
+          >
             I Build
             <br />
             Modern Web
@@ -30,28 +38,35 @@ const Hero = () => {
             </span>
           </h1>
 
-          <div className="flex gap-4 mt-10">
+          {/* Resume Button */}
+          <div className="mt-[4vh]">
             <a
               href="/resume.pdf"
               target="_blank"
+              rel="noopener noreferrer"
               className="
+                inline-block
                 bg-black
                 text-white
-                px-8
-                py-4
+                px-[5vw]
+                sm:px-[4vw]
+                lg:px-[2vw]
+                py-[1.5vh]
+                text-sm
+                sm:text-base
+                md:text-lg
                 rounded-2xl
                 hover:scale-105
-                transition
+                transition-all
+                duration-300
               "
             >
               Download Resume
             </a>
-
-           
           </div>
 
-          {/* TECH STACK */}
-          <div className="flex flex-wrap gap-3 mt-14">
+          {/* Tech Stack */}
+          <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 mt-[5vh]">
             {[
               "React",
               "Node.js",
@@ -66,9 +81,11 @@ const Hero = () => {
                   border
                   border-black
                   rounded-full
-                  px-4
-                  py-2
-                  text-sm
+                  px-[3vw]
+                  sm:px-[1.2vw]
+                  py-[0.8vh]
+                  text-xs
+                  sm:text-sm
                   font-bold
                 "
               >
@@ -77,66 +94,56 @@ const Hero = () => {
             ))}
           </div>
 
-          {/* SOCIALS */}
-          <div className="flex gap-12 mt-12 text-3xl  ">
-            <a className="hover:scale-130 transition hover:text-blue-800" href="https://www.linkedin.com/in/ankit-rajput-a42357255/">
+          {/* Social Links */}
+          <div
+            className="
+            flex
+            justify-center
+            lg:justify-start
+            gap-[6vw]
+            sm:gap-[4vw]
+            lg:gap-[2vw]
+            mt-[5vh]
+            text-2xl
+            sm:text-3xl
+            md:text-4xl
+            "
+          >
+            <a
+              href="https://www.linkedin.com/in/ankit-rajput-a42357255/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:scale-125 transition-all duration-300 hover:text-blue-800"
+            >
               <GrLinkedinOption />
             </a>
 
-            <a className="hover:scale-130 transition hover:text-green-800" href="https://github.com/ankitrajput9">
+            <a
+              href="https://github.com/ankitrajput9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:scale-125 transition-all duration-300 hover:text-green-800"
+            >
               <FaGitAlt />
             </a>
 
-            <a className="hover:scale-130 transition hover:text-pink-800" href="https://www.instagram.com/a_nkit_rajput_/">
+            <a
+              href="https://www.instagram.com/a_nkit_rajput_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:scale-125 transition-all duration-300 hover:text-pink-800"
+            >
               <FaInstagram />
             </a>
 
-            <a className="hover:scale-130 transition hover:text-red-800" href="mailto:rajputankit9630@gmail.com">
+            <a
+              href="mailto:rajputankit9630@gmail.com"
+              className="hover:scale-125 transition-all duration-300 hover:text-red-800"
+            >
               <BiLogoGmail />
             </a>
           </div>
         </div>
-
-        {/* RIGHT
-        <div className="hidden lg:flex flex-1 justify-center">
-          <div
-            className="
-              w-[500px]
-              h-[600px]
-              rounded-[40px]
-              bg-[#F2CC7A]
-              border-2
-              border-black/10
-              relative
-            "
-          >
-            <div
-              className="
-                absolute
-                bottom-10
-                left-10
-                right-10
-                bg-[#EFD79E]
-                rounded-3xl
-                p-6
-              "
-            >
-              <p className="text-sm uppercase">
-                Available for Work
-              </p>
-
-              <h3 className="text-3xl font-black mt-2">
-                MERN Developer
-              </h3>
-
-              <p className="mt-3">
-                Building modern web applications
-                and digital products.
-              </p>
-            </div>
-          </div>
-        </div> */}
-
       </div>
     </section>
   );

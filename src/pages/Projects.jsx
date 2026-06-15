@@ -39,32 +39,59 @@ const Projects = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-[#E8BF6A] px-8 py-20 overflow-hidden">
+    <section className="min-h-screen bg-[#E8BF6A] px-5 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-20 overflow-hidden">
       {/* Heading */}
-      <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-black mb-24 font-FZHLJW">
+      <h1
+        className="
+        text-5xl
+        sm:text-6xl
+        md:text-7xl
+        lg:text-8xl
+        xl:text-9xl
+        font-black
+        text-black
+        mb-12
+        sm:mb-20
+        font-FZHLJW
+      "
+      >
         | projects
       </h1>
 
-      {/* Cards */}
-      <div className="flex flex-wrap justify-center gap-14">
+      {/* Projects */}
+      <div className="flex flex-wrap justify-center gap-8 lg:gap-14">
         {projects.map((project, index) => (
           <div
             key={index}
             className={`
-              w-65
+              w-full
+              sm:w-[80vw]
+              md:w-[42vw]
+              lg:w-[18vw]
               cursor-pointer
               transition-all
               duration-500
-              hover:-translate-y-8
+              hover:-translate-y-4
               ${
                 index % 2 === 0
-                  ? "-translate-y-8"
-                  : "translate-y-8"
+                  ? "lg:-translate-y-8"
+                  : "lg:translate-y-8"
               }
             `}
           >
             {/* Image Card */}
-            <div className="h-95 overflow-hidden rounded-[28px] bg-white shadow-lg">
+            <div
+              className="
+              h-[50vh]
+              sm:h-[60vh]
+              md:h-[55vh]
+              lg:h-[70vh]
+              overflow-hidden
+              rounded-[28px]
+              bg-white
+              shadow-lg
+            "
+            >
               <img
                 src={project.image}
                 alt={project.title}
@@ -72,14 +99,24 @@ const Projects = () => {
               />
             </div>
 
-            {/* Title */}
+            {/* Title + Tag */}
             <div className="mt-5 flex items-start justify-between gap-3">
               <div>
-                <h3 className="text-2xl  font-black uppercase leading-tight text-black font-FZHLJW">
+                <h3
+                  className="
+                  text-xl
+                  sm:text-2xl
+                  font-black
+                  uppercase
+                  leading-tight
+                  text-black
+                  font-FZHLJW
+                "
+                >
                   {project.title}
                 </h3>
 
-                <p className="text-lg font-bold uppercase text-[#C8861D]">
+                <p className="text-sm sm:text-lg font-bold uppercase text-[#C8861D]">
                   {project.category}
                 </p>
               </div>
@@ -92,7 +129,8 @@ const Projects = () => {
                   rounded-lg
                   px-3
                   py-1
-                  text-xs
+                  text-[10px]
+                  sm:text-xs
                   font-bold
                   tracking-[2px]
                   whitespace-nowrap
@@ -101,20 +139,24 @@ const Projects = () => {
                 {project.tag}
               </span>
             </div>
-          </div>
-        ))}
-      </div>
 
-      {/* Description Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-15 ">
-        {projects.map((project, index) => (
-          <div key={index}>
-            {/* Top Line */}
-            <div className="w-full h-[2px] bg-[#C8861D] mb-6" />
+            {/* Description */}
+            <div className="mt-6">
+              <div className="w-full h-[2px] bg-[#C8861D] mb-4" />
 
-            <p className="text-[20px] leading-[1.5] text-black/80 font-Faktum-Medium ">
-              {project.description}
-            </p>
+              <p
+                className="
+                text-sm
+                sm:text-base
+                lg:text-lg
+                leading-[1.6]
+                text-black/80
+                font-Faktum-Medium
+              "
+              >
+                {project.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>

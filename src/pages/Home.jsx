@@ -5,7 +5,7 @@ import Skills from '@/Sections/Skills';
 
 const Home = () => {
   return (
-    <div className='w-full bg-[#E8BF6A]'>
+    <div className=' overflow-hidden bg-[#E8BF6A]'>
       <Hero/>
       <About/>
       <Skills/>
